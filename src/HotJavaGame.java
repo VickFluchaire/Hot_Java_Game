@@ -1,8 +1,7 @@
 
 /**
- * Represent a game, new game + the concept
- * @author Fluchaire
- * @author Delaunay
+ * Represent a HotJava game
+ * @author Fluchaire, Delaunay
  */
 
 public class HotJavaGame
@@ -17,10 +16,10 @@ public class HotJavaGame
 	
 	/**
 	 * Create a new HotJava game, ready to be played
-	 * We have a square tray with tiles, all tiles are reverse
-	 * The coffee take a randomly tile out of the square but on the left side
-	 * The coffee cup is place randomly on the right side
-	 * Turn is initialize at 0
+	 * The board is initialized with reversed tiles
+	 * The coffee comes from a random tile out of the square on the left side
+	 * The coffee cup is placed randomly on the right side
+	 * Turn is initialized at 0
 	 * 
 	 */
 	
@@ -28,10 +27,12 @@ public class HotJavaGame
 	{
 		this.turn = 0;
 		
+		// TODO how the board is represented, and initialized ?		
 	}
 		
+	// TODO describe the main algorithm
 	/** 
-	 * Play the game
+	 * Plays the game
 	 * The  
 	 */
 	

@@ -1,16 +1,15 @@
-
+// TODO update README.md (what/who-
 /**
  * Represent application of the game HotJava
- * @author Fluchaire
- * @author Delaunay
+ * @author Fluchaire, Delaunay
  */
 
 public class HotJavaApp
 {
 
 	/**
-	 * Call to HotJavaGame class
-	 * @param args ...
+	 * Application's main
+	 * @param args command-line arguments (unused)
 	 */
 	
 	public static void main(String[] args)
