@@ -1,4 +1,4 @@
-// TODO update README.md (what/who-
+// TODO (DONE) update README.md (what/who-
 /**
  * Represent application of the game HotJava
  * @author Fluchaire, Delaunay
@@ -14,7 +14,7 @@ public class HotJavaApp
 	
 	public static void main(String[] args)
 	{
-		new HotJavaGame().play();
+		new HotJavaGame(0, 0).play(); 			// We must have to correct this parameters.
 
 	}
 
