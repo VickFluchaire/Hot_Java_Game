@@ -1,4 +1,3 @@
-// TODO (DONE) update README.md (what/who-
 /**
  * Represent application of the game HotJava
  * @author Fluchaire, Delaunay

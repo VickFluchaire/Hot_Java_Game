@@ -6,24 +6,33 @@
 
 public class HotJavaGame
 {
+	// TODO fix comment (ask for advice)
 	/**
 	 * Attributes
 	 * 
 	 * -nbTurn create to count the total number of turn during a game
 	 */
 	private int nbTurn;
+	
+	// TODO fix comment (ask for advice)	
 	/**
 	 * -countdown is create to show to the player when the coffee will flow
 	 */
 	private int countdown;
+	
+	// TODO fix comment (ask for advice)
 	/**
 	 * -nbline represent the line's number in the board
 	 */
 	private int nbLine;
+	
+	// TODO fix comment (ask for advice)
 	/**
 	 * -nbCol represent the column's number in the board
 	 */
 	private int nbCol;
+	
+	// TODO fix comment (ask for advice)
 	/**
 	 * -board is the main board 
 	 */
@@ -46,11 +55,9 @@ public class HotJavaGame
 		this.nbLine = n;
 		this.nbCol = p;
 		this.board = new char [nbLine][nbCol];
-		
-		// TODO (DONE) how the board is represented, and initialized ?
 	}
-		
-	// TODO (DONE) describe the main algorithm
+	
+	// TODO clarify algorithm (ask for advice)
 	/** 
 	 * Start the game
 	 * 
