@@ -13,7 +13,7 @@ public class HotJavaApp
 	
 	public static void main(String[] args)
 	{
-		new HotJavaGame(0, 0).play(); 			// We must have to correct this parameters.
+		new HotJavaGame(10, 10).play();			// We must have to correct this parameters.
 
 	}
 
