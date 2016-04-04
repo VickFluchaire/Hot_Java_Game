@@ -32,17 +32,23 @@ public class HotJavaGame
 	 */
 	private final int nbCol;
 	
-	// TODO explain coordinates system and cell content
+	// TODO (DONE) explain coordinates system and cell content
 	/**
-	 * The main board 
+	 * The main board [Number of lines][Number of column]
 	 */
 	private char[][] board;
 
 	// TODO write comment
 	/**
-	 * 
+	 * Use variables of an other object
 	 */
 	private Player player;
+	
+	/**
+	 * Use variables of an other object
+	 */
+	private Position position;
+	
 
 
 	/**
@@ -52,8 +58,8 @@ public class HotJavaGame
 	 * The coffee cup is placed randomly on the right side
 	 * Player is ready to play
 	 * 
-	 * @param n number of lines
-	 * @param p number of columns
+	 * @param n Number of lines
+	 * @param p Number of columns
 	 * 
 	 */
 	public HotJavaGame(int n, int p)
@@ -83,28 +89,38 @@ public class HotJavaGame
 	/** 
 	 * Play the game
 	 * 
-	 * 		while (<game is not over>)
-	 *         do
-	 *       	 <ask player for a tile to handle>
-	 *         while (<tile is not valid>)
-	 *         if (<tile is hidden)
-	 *         	<reveal tile>
-	 *         else
-	 *           do
-	 *       	 	<ask player for the tile to swap with the first one>
-	 *           while (<tile is not valid>)
-	 *           <swap tiles>
-	 *           <update coffee>
-	 *           <update score>
+	 *			while (<game is not over>)
+	 *         		do
+	 *       		<ask player for a tile to handle>
+	 *        		while (<tile is valid>)
+	 *         			if (<tile is hidden)
+	 *         				<reveal tile>
+	 *         				NbTurn++;
+	 *         				countdown--;
+	 *         			else
+	 *           			do
+	 *       	 			<ask player for the tile to swap with the first one>
+	 *           			<swap tiles>
+	 *           			NbTurn++;
+	 *           			countdown--;
+	 *           	if <tile is not valid>
+	 *           		it's an error throws tilesException
+	 *           	while countdown != 0 {}
+	 *           	when countdown = 0
+	 *					<update coffee>	
+	 * 				<update score>
+	 * 			<game is over>
+	 * 			<display score>
+	 * 			
 	 */
 	
 	public void play()
 	{
 		while(!this.isGameOver())
 		{
-			do
+			
 			{
-				Position position = this.player.askForTile(); 
+				Position position = this.player.askForTile();
 			}
 		}
 			
@@ -113,3 +129,4 @@ public class HotJavaGame
 	
 
 }
+
