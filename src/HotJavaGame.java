@@ -6,7 +6,7 @@
 
 public class HotJavaGame
 {
-	// TODO (DONE) fix comment (ask for advice)
+	// TODO fix comment (re-ask for advice)
 	/**
 	 * Attributes
 	 * 
@@ -20,24 +20,25 @@ public class HotJavaGame
 	 */
 	private final int countdown;
 	
-	// TODO (DONE) fix comment (ask for advice)
+	// TODO fix comment (re-ask for advice)
 	/**
 	 * Represent the line's number in the board
 	 */
 	private final int nbLine;
 	
-	// TODO (DONE) fix comment (ask for advice)
+	// TODO fix comment (re-ask for advice)
 	/**
 	 * Represent the column's number in the board
 	 */
 	private final int nbCol;
 	
-	// TODO (DONE) fix comment (ask for advice)
+	// TODO explain coordinates system and cell content
 	/**
 	 * The main board 
 	 */
 	private char[][] board;
 
+	// TODO write comment
 	/**
 	 * 
 	 */
@@ -65,7 +66,7 @@ public class HotJavaGame
 		this.player = new Player();
 	}
 	
-	
+	// TODO fix comment (ask for advice)
 	/**
 	 * This method is for a game lost
 	 * @return Defeat
