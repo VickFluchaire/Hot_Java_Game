@@ -49,6 +49,11 @@ public class HotJavaGame
 	 */
 	private Position position;
 	
+	/**
+	 * Use variables of an other object
+	 */
+	private Tiles tiles;
+	
 
 
 	/**
@@ -90,27 +95,30 @@ public class HotJavaGame
 	 * Play the game
 	 * 
 	 *			while (<game is not over>)
+	 *			{
 	 *         		do
-	 *       		<ask player for a tile to handle>
-	 *        		while (<tile is valid>)
-	 *         			if (<tile is hidden)
-	 *         				<reveal tile>
-	 *         				NbTurn++;
-	 *         				countdown--;
-	 *         			else
-	 *           			do
+	 *         		{
+	 *       			<ask player for a tile to handle>
+	 *      		}
+	 *        		while (<tile is not valid>)
+	 *        
+	 *         		if (<tile is hidden>)
+	 *         		{
+	 *         			<reveal tile>
+	 
+	 *         		}
+	 *         		else
+	 *         		{
+	 *           		do
+	 *           		{
 	 *       	 			<ask player for the tile to swap with the first one>
-	 *           			<swap tiles>
-	 *           			NbTurn++;
-	 *           			countdown--;
-	 *           	if <tile is not valid>
-	 *           		it's an error throws tilesException
-	 *           	while countdown != 0 {}
-	 *           	when countdown = 0
-	 *					<update coffee>	
-	 * 				<update score>
-	 * 			<game is over>
-	 * 			<display score>
+	 *       			}
+	 *           		while (<tile is not valid>)
+	 *           		<swap tiles>
+	 *           	}
+	 *           	<update coffee>
+	 *           	<update game status>
+	 *         }     	
 	 * 			
 	 */
 	
@@ -118,10 +126,35 @@ public class HotJavaGame
 	{
 		while(!this.isGameOver())
 		{
-			
+			do
 			{
 				Position position = this.player.askForTile();
 			}
+			
+			while (this.tiles.tileNotValid());
+			
+				{
+				
+				}
+				
+				if (this.tiles.tilesUnreveal() == "Unreveal");
+				
+					{
+						
+					}
+				
+			else
+			{
+				do
+				{
+					Position position = this.player.askForTilesToSwap();
+				}
+				while (this.tiles.tileNotValid());
+				//swapTiles
+			}
+			
+				
+
 		}
 			
 		

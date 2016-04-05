@@ -1,10 +1,5 @@
 /**
- * 
- */
-
-/**
  * @author Delaunay / Fluchaire
- *
  */
 public class Position extends Player
 {
