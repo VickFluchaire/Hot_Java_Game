@@ -1,5 +1,5 @@
 /**
- * 
+ * Class for the position
  * @author Delaunay / Fluchaire
  */
 public class Position

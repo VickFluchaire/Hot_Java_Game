@@ -1,5 +1,5 @@
 /**
- * It's an idea to create a board in an other class
+ * It's an idea to create a board in an other class board
  * We let in comment the precedent configuration
  * @author Delaunay / Fluchaire
  */

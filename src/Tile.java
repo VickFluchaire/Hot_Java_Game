@@ -1,5 +1,5 @@
 /**
- * 
+ * Class for a tile
  * @author Fluchaire / Delaunay
  */
 public class Tile

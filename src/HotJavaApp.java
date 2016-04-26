@@ -1,5 +1,5 @@
 /**
- * Represent application of the game HotJava
+ * Represent application of the game HotJava 
  * @author Fluchaire, Delaunay
  */
 
