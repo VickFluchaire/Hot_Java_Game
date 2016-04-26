@@ -20,25 +20,26 @@ public class HotJavaGame
 	 */
 	private final int countdown;
 	
-	// TODO fix comment (re-ask for advice)
-	/**
-	 * Represent the line's number in the board
-	 */
-	private final int nbLine;
 	
-	// TODO fix comment (re-ask for advice)
-	/**
-	 * Represent the column's number in the board
-	 */
-	private final int nbCol;
+	//Before the creation of the class Board
+
+//	/**
+//	 * Represent the line's number in the board
+//	 */
+//	private final int nbLine;
+//	
+//	/**
+//	 * Represent the column's number in the board
+//	 */
+//	private final int nbCol;
 	
-	// TODO (DONE) explain coordinates system and cell content
+	
+
 	/**
 	 * The main board [Number of lines][Number of column]
 	 */
-	private char[][] board;
+	private Board board;
 
-	// TODO write comment
 	/**
 	 * Use variables of an other object
 	 */
@@ -52,7 +53,7 @@ public class HotJavaGame
 	/**
 	 * Use variables of an other object
 	 */
-	private Tiles tiles;
+	private Tile tile;
 	
 
 
@@ -71,10 +72,15 @@ public class HotJavaGame
 	{
 		this.nbTurn = 0;
 		this.countdown = 10;
-		this.nbLine = n;
-		this.nbCol = p;
-		this.board = new char [this.nbLine][this.nbCol];
-		this.player = new Player();
+		
+		
+		//Before the creation of the class Board
+		
+//		this.nbLine = n;
+//		this.nbCol = p;
+//		this.board = new char [this.nbLine][this.nbCol];
+		
+		this.player = new Player();	
 	}
 	
 	// TODO fix comment (ask for advice)
@@ -107,14 +113,12 @@ public class HotJavaGame
 	 *         			<reveal tile>
 	 
 	 *         		}
-	 *         		else
-	 *         		{
-	 *           		do
-	 *           		{
-	 *       	 			<ask player for the tile to swap with the first one>
-	 *       			}
-	 *           		while (<tile is not valid>)
-	 *           		<swap tiles>
+	 *           	do
+	 *           	{
+	 *       	 		<ask player for the tile to swap with the first one>
+	 *       		}
+	 *           	while (<tile is not valid>)
+	 *           	<swap tiles>
 	 *           	}
 	 *           	<update coffee>
 	 *           	<update game status>
@@ -128,30 +132,28 @@ public class HotJavaGame
 		{
 			do
 			{
-				Position position = this.player.askForTile();
+				Position position = this.player.askForTilePosition();
 			}
 			
-			while (this.tiles.tileNotValid());
+			while (this.tile.tileNotValid());
 			
-				{
-				
-				}
-				
-				if (this.tiles.tilesUnreveal() == "Unreveal");
-				
-					{
-						
-					}
-				
-			else
 			{
+				
+				if (this.tile.tileUnreveal() == "Unreveal");
+				
+				{
+					String tiles = this.tile.tileReveal();
+				}
+
 				do
 				{
 					Position position = this.player.askForTilesToSwap();
 				}
-				while (this.tiles.tileNotValid());
+				while (this.tile.tileNotValid());
 				//swapTiles
+				
 			}
+				
 			
 				
 

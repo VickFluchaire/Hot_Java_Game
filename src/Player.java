@@ -1,5 +1,6 @@
 /**
  * This is a class where player's actions are defined
+ * @author Fluchaire, Delaunay
  */
 
 public class Player
@@ -8,7 +9,7 @@ public class Player
 	 * Ask player for a tile to handle
 	 * @return Position
 	 */
-	public Position askForTile()
+	public Position askForTilePosition()
 	{
 		return new Position();
 

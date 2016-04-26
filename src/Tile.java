@@ -1,27 +1,21 @@
 /**
  * 
- */
-
-/**
  * @author Fluchaire / Delaunay
- *
  */
-public class Tiles
+public class Tile
 {
 	/**
 	 * State of a tile
+	 * Reveal or not Reveal that's the question
 	 */
-	public String state;
+	public Boolean state;
+	
+	// (TODO) Need correction for each method and constructor because we change the type of state (String to Boolean)
 	
 	/**
-	 * 
+	 * Default Tile
 	 */
-	
-	
-	/**
-	 * Initialization for tiles
-	 */
-	public Tiles()
+	public Tile()
 	{
 		this.state = "Unreveal";
 	}
@@ -31,7 +25,7 @@ public class Tiles
 	 * Accessors for tiles unreveal
 	 * @return stateUnreveal
 	 */
-	public String tilesUnreveal()
+	public String tileUnreveal()
 	{
 		return this.state = "Unreveal";
 	}
@@ -40,27 +34,18 @@ public class Tiles
 	 * Accessors for tiles reveal
 	 * @return stateReveal
 	 */
-	public String tilesReveal()
+	public String tileReveal()
 	{
 		return this.state = "Reveal";
 	}
 	
 	/**
-	 * A tiles not valid it's a tile with coffee or if the player give bad instructions
+	 * A tile not valid it's a tile with coffee or if the player give bad instructions
 	 * @return False
 	 */
 	public boolean tileNotValid()
 	{
-		
 		return false;	
-	}
-	/**
-	 * 
-	 * @return False
-	 */
-	public boolean tileReveal()
-	{
-		return false;
 	}
 	
 }
