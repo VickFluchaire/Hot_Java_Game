@@ -6,15 +6,13 @@
 
 public class HotJavaGame
 {
-	// TODO fix comment (re-ask for advice)
 	/**
 	 * Attributes
 	 * 
 	 * Create to count the total number of turn during a game
 	 */
 	private int nbTurn;
-	
-	// TODO (DONE) fix comment (ask for advice)	
+
 	/**
 	 *  Create to show to the player when the coffee will flow
 	 */
@@ -54,6 +52,11 @@ public class HotJavaGame
 	 * Use variables of an other object
 	 */
 	private Tile tile;
+	
+	/**
+	 * 
+	 */
+	private Tile state;
 	
 
 
@@ -135,21 +138,21 @@ public class HotJavaGame
 				Position position = this.player.askForTilePosition();
 			}
 			
-			while (this.tile.tileNotValid());
+			while (this.board.tileNotValid());
 			
 			{
 				
-				if (this.tile.tileUnreveal() == "Unreveal");
+				if (this.tile.reveal() == false);
 				
 				{
-					String tiles = this.tile.tileReveal();
+					tile = this.tile.reveal();
 				}
 
 				do
 				{
 					Position position = this.player.askForTilesToSwap();
 				}
-				while (this.tile.tileNotValid());
+				while (this.tile.state == false);
 				//swapTiles
 				
 			}
