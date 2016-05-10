@@ -1,55 +1,42 @@
 /**
- * It's an idea to create a board in an other class board
- * We let in comment the precedent configuration
+ * It's the board class
+ * 
  * @author Delaunay / Fluchaire
  */
 public class Board
 {
 	/**
-	 * Represent the line's number in the board
-	 */
-	private final int nbLine;
-	
-	/**
-	 * Represent the column's number in the board
-	 */
-	private final int nbCol;
-	
-	/**
 	 * The main board [Number of lines][Number of column]
 	 */
-	private char[][] board;
+	private Tile[][] board;
 	
 	/**
-	 * Take the valor from position for x
+	 * 
 	 */
-	private Position x;
+	private Position getX;
 	
 	/**
-	 * Take the valor from position for y
+	 * 
 	 */
-	private Position y;
+	private Position getY;
+
 
 	// le tableau doit contenir des références vers des objets
 	// Les coordonnées doivent être récupérés dans Position et le test demande à Tile si la tuile est révélée ou non
 
 	/**
 	 * Constructor for the entire board which take two entire in parameters
-	 * @param n
-	 * @param p
 	 */
-	public Board(int n, int p)
+	public Board()
 	{
-		this.nbLine = n;
-		this.nbCol = p;
-		this.setBoard(new char[this.nbLine][this.nbCol]);
+		this.setBoard(new Tile[7][7]);
 	}
 
 	/**
 	 * Getter for the board
 	 * @return the board
 	 */
-	public char[][] getBoard()
+	public Tile[][] getBoard()
 	{	
 		return this.board;
 	}
@@ -58,48 +45,42 @@ public class Board
 	 * Encapsulation for the creation of the board
 	 * @param board the board to set
 	 */
-	public void setBoard(char[][] board)
+	public void setBoard(Tile[][] board)
 	{
 		this.board = board;
 	}
 	
-	//(TODO) A finir
 	/**
 	 * This method permit to ask passing by Position and Tile if the tile selected is valid or not 
 	 * 
-	 * @param x 
-	 * @param y 
+	 * A tile is not valid if, there are already coffee on it, if the player select a position out of the board
+	 * @param position 
 	 * @return  boolean
 	 */
-	public boolean tileNotValid(int x, int y)
+	public boolean tileNotValid(Position position)
 	{
-		for(int x1 = 0; x1 < this.nbLine; x1++)
+		if(position.getX() < 7 && position.getY() < 7)
 		{
-			for(int y1 = 0; y1 < this.nbCol; y1++)
-			{
-				
-			}
+			return true;
 		}
-		return false;
+		else
+		{
+			return false;
+		}
 	}
-	
 	
 	
 	/**
-	 * Display for the main board
-	 * return display
+	 * 
+	 * @param position1 
+	 * @param position2 
 	 */
-	public String toString()
+	public void swapTiles(Position position1, Position position2)
 	{
-		for(int i = 0; i < this.nbLine; i++)
-		{
-			for(int j=0; j < this.nbCol; j++)
-			{
+		position1.x = position2.x;
+		position1.y = position2.y;
 				
-			}
-		}
-		return null;
 	}
-	
 }
+	
 

@@ -18,21 +18,6 @@ public class HotJavaGame
 	 */
 	private final int countdown;
 	
-	
-	//Before the creation of the class Board
-
-//	/**
-//	 * Represent the line's number in the board
-//	 */
-//	private final int nbLine;
-//	
-//	/**
-//	 * Represent the column's number in the board
-//	 */
-//	private final int nbCol;
-	
-	
-
 	/**
 	 * The main board [Number of lines][Number of column]
 	 */
@@ -76,13 +61,6 @@ public class HotJavaGame
 		this.nbTurn = 0;
 		this.countdown = 10;
 		
-		
-		//Before the creation of the class Board
-		
-//		this.nbLine = n;
-//		this.nbCol = p;
-//		this.board = new char [this.nbLine][this.nbCol];
-		
 		this.player = new Player();	
 	}
 	
@@ -93,7 +71,6 @@ public class HotJavaGame
 	 */
 	public boolean isGameOver()
 	{
-		// TODO tbc
 		return false;
 	}
 	
@@ -120,7 +97,7 @@ public class HotJavaGame
 	 *           	{
 	 *       	 		<ask player for the tile to swap with the first one>
 	 *       		}
-	 *           	while (<tile is not valid>)
+	 *           	while (<tile is valid>)
 	 *           	<swap tiles>
 	 *           	}
 	 *           	<update coffee>
@@ -138,33 +115,27 @@ public class HotJavaGame
 				Position position = this.player.askForTilePosition();
 			}
 			
-			while (this.board.tileNotValid());
-			
+			while (this.board.tileNotValid(this.position));
 			{
-				
-				if (this.tile.reveal() == false);
-				
+				if (this.tile.state == false);
 				{
-					tile = this.tile.reveal();
+					this.tile.reveal();
 				}
 
 				do
 				{
 					Position position = this.player.askForTilesToSwap();
 				}
-				while (this.tile.state == false);
+				while (this.tile.state == true);
 				//swapTiles
-				
+				{
+					
+				}
 			}
-				
-			
-				
 
 		}
-			
-		
+	
 	}
 	
-
 }
 

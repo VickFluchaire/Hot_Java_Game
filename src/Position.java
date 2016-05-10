@@ -13,8 +13,7 @@ public class Position
 	 * Initialization for y
 	 */
 	public static final int Y_DEFAULT = 0;
-	
-	
+		
 	/**
 	 * Variable x for the number of the line
 	 */
@@ -24,8 +23,7 @@ public class Position
 	 * Variable y for the number of the line
 	 */
 	private final int y; 
-	
-	
+		
 	/**
 	 * 
 	 */
@@ -36,7 +34,6 @@ public class Position
 	}
 
 	/**
-	 * 
 	 * @param x0
 	 * @param y0
 	 */
