@@ -22,7 +22,7 @@ public class Position
 	/**
 	 * Variable y for the number of the line
 	 */
-	private final int y; 
+	private final int y;
 		
 	/**
 	 * 

@@ -6,48 +6,39 @@
 public class Board
 {
 	/**
-	 * The main board [Number of lines][Number of column]
+	 * Initialization at 7 column and 7 row for our board
+	 */
+	public final static int BOARD_SIZE = 7;
+	
+
+	/**
+	 * 
 	 */
 	private Tile[][] board;
-	
+
 	/**
 	 * 
 	 */
-	private Position getX;
-	
+	private Position p1;
+
 	/**
 	 * 
 	 */
-	private Position getY;
+	private Position p2;
 
-
-	// le tableau doit contenir des références vers des objets
-	// Les coordonnées doivent être récupérés dans Position et le test demande à Tile si la tuile est révélée ou non
+	/**
+	 * 
+	 */
+	private Position p3;
 
 	/**
 	 * Constructor for the entire board which take two entire in parameters
 	 */
 	public Board()
 	{
-		this.setBoard(new Tile[7][7]);
-	}
-
-	/**
-	 * Getter for the board
-	 * @return the board
-	 */
-	public Tile[][] getBoard()
-	{	
-		return this.board;
-	}
-
-	/**
-	 * Encapsulation for the creation of the board
-	 * @param board the board to set
-	 */
-	public void setBoard(Tile[][] board)
-	{
-		this.board = board;
+		this.board = new Tile[BOARD_SIZE][BOARD_SIZE];
+		
+		System.out.println(this.board[BOARD_SIZE][BOARD_SIZE]); 
 	}
 	
 	/**
@@ -59,7 +50,7 @@ public class Board
 	 */
 	public boolean tileNotValid(Position position)
 	{
-		if(position.getX() < 7 && position.getY() < 7)
+		if(position.getX() < BOARD_SIZE && position.getY() < BOARD_SIZE)
 		{
 			return true;
 		}
@@ -71,16 +62,27 @@ public class Board
 	
 	
 	/**
+	 * @param p1 
+	 * @param p2 
+	 * @param p3 
 	 * 
-	 * @param position1 
-	 * @param position2 
+	 * method to swap tiles
+	 * @return null
 	 */
-	public void swapTiles(Position position1, Position position2)
+	public Position swapTiles(Position p1, Position p2, Position p3)
 	{
-		position1.x = position2.x;
-		position1.y = position2.y;
-				
+		this.p3 = this.p1;
+		this.p1 = this.p2;
+		this.p2 = this.p3;
+		return null;
+	}
+	
+	
+	/**
+	 * @return message
+	 */
+	public String tilesSwap()
+	{
+		return "Tiles"+this.p1+","+this.p2+"swaped";
 	}
 }
-	
-

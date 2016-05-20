@@ -6,6 +6,7 @@
 
 public class HotJavaGame
 {
+
 	/**
 	 * Attributes
 	 * 
@@ -43,6 +44,7 @@ public class HotJavaGame
 	 */
 	private Tile state;
 	
+	
 
 
 	/**
@@ -51,12 +53,8 @@ public class HotJavaGame
 	 * The coffee comes from a random tile out of the square on the left side
 	 * The coffee cup is placed randomly on the right side
 	 * Player is ready to play
-	 * 
-	 * @param n Number of lines
-	 * @param p Number of columns
-	 * 
 	 */
-	public HotJavaGame(int n, int p)
+	public HotJavaGame()
 	{
 		this.nbTurn = 0;
 		this.countdown = 10;
@@ -64,7 +62,6 @@ public class HotJavaGame
 		this.player = new Player();	
 	}
 	
-	// TODO fix comment (ask for advice)
 	/**
 	 * This method is for a game lost
 	 * @return Defeat
@@ -74,9 +71,7 @@ public class HotJavaGame
 		return false;
 	}
 	
-	
-	
-	// TODO clarify algorithm (ask for advice)
+
 	/** 
 	 * Play the game
 	 * 
@@ -127,10 +122,10 @@ public class HotJavaGame
 					Position position = this.player.askForTilesToSwap();
 				}
 				while (this.tile.state == true);
-				//swapTiles
 				{
-					
+					Position board = this.board.swapTiles(this.position, this.position, this.position);
 				}
+				
 			}
 
 		}
@@ -138,4 +133,3 @@ public class HotJavaGame
 	}
 	
 }
-
