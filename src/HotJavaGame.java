@@ -1,7 +1,8 @@
+import java.util.Scanner;
 
 /**
  * Represent a HotJava game  
- * @author Fluchaire, Delaunay
+ * @author Fluchaire / Delaunay
  */
 
 public class HotJavaGame
@@ -22,7 +23,7 @@ public class HotJavaGame
 	/**
 	 * The main board [Number of lines][Number of column]
 	 */
-	private Board board;
+	private Tile[][] board;
 
 	/**
 	 * Use variables of an other object
@@ -44,8 +45,6 @@ public class HotJavaGame
 	 */
 	private Tile state;
 	
-	
-
 
 	/**
 	 * Create a new HotJava game, ready to be played
@@ -58,8 +57,6 @@ public class HotJavaGame
 	{
 		this.nbTurn = 0;
 		this.countdown = 10;
-		
-		this.player = new Player();	
 	}
 	
 	/**
@@ -101,9 +98,10 @@ public class HotJavaGame
 	 * 			
 	 */
 	
+	
 	public void play()
 	{
-		while(!this.isGameOver())
+		/*while(!this.isGameOver())
 		{
 			do
 			{
@@ -128,8 +126,8 @@ public class HotJavaGame
 				
 			}
 
-		}
+		}*/
 	
 	}
-	
 }
+	

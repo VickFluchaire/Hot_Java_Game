@@ -1,6 +1,6 @@
 /**
  * Class for the position
- * @author Delaunay / Fluchaire
+ * @author Fluchaire / Delaunay
  */
 public class Position
 {
