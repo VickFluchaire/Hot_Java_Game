@@ -17,8 +17,6 @@ public class HotJavaApp
 	{
 		/* Read and register a player name */
 	
-		
-		
 			Scanner sc = new Scanner(System.in);
 	        System.out.println("Veuillez saisir un nom :");
 	        String namescan = sc.nextLine();
@@ -27,15 +25,13 @@ public class HotJavaApp
 			System.out.println(" ");
 			System.out.println("Bonjour " + player1.getName()+ " et bienvenue !");
 			System.out.println(" ");
-			System.out.println("Une partie de HotJavaGame a été créée");
-			System.out.println(" ");
-			System.out.println("**********************");
+			System.out.println("Une partie de HotJavaGame a été créée :");
 			System.out.println(" ");
 	        Player player = new Player(player1, sc);
-	        
-	      
+
 	        new HotJavaGame().play();
-	        /*Board.generateBoard();*/
+	        
+	        
 	        
 	        sc.close();
 	}

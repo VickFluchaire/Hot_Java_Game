@@ -21,9 +21,9 @@ public class HotJavaGame
 	private final int countdown;
 	
 	/**
-	 * The main board [Number of lines][Number of column]
+	 * For using method of board
 	 */
-	private Tile[][] board;
+	private Board board;
 
 	/**
 	 * Use variables of an other object
@@ -71,7 +71,6 @@ public class HotJavaGame
 
 	/** 
 	 * Play the game
-	 * 
 	 *			while (<game is not over>)
 	 *			{
 	 *         		do
@@ -94,13 +93,18 @@ public class HotJavaGame
 	 *           	}
 	 *           	<update coffee>
 	 *           	<update game status>
-	 *         }     	
-	 * 			
+	 *         }     			
 	 */
 	
 	
 	public void play()
 	{
+
+		this.board.generateBoard();
+		this.board.afficher();
+        
+		/* After the creation of the interface and the board, our algorithm is not in link with our program */
+		
 		/*while(!this.isGameOver())
 		{
 			do
@@ -108,7 +112,7 @@ public class HotJavaGame
 				Position position = this.player.askForTilePosition();
 			}
 			
-			while (this.board.tileNotValid(this.position));
+			while (this.Board.tileNotValid(this.position));
 			{
 				if (this.tile.state == false);
 				{

@@ -4,28 +4,33 @@
  */
 public class Position
 {
+	
 	/**
 	 *  initialization for x
 	 */
 	public static final int X_DEFAULT = 0;
+	
 	
 	/**
 	 * Initialization for y
 	 */
 	public static final int Y_DEFAULT = 0;
 		
+	
 	/**
 	 * Variable x for the number of the line
 	 */
 	private final int x;
+	
 	
 	/**
 	 * Variable y for the number of the line
 	 */
 	private final int y;
 		
+	
 	/**
-	 * 
+	 * Constructor for position
 	 */
 	public Position()
 	{
@@ -33,7 +38,9 @@ public class Position
 		this.y = Position.Y_DEFAULT;
 	}
 
+	
 	/**
+	 * Constructor for position with parameters
 	 * @param x0
 	 * @param y0
 	 */
@@ -43,6 +50,7 @@ public class Position
 		this.y = y0;
 	}
 
+	
 	/**
 	 * method for get the coordinate of x
 	 * @return x
@@ -52,6 +60,7 @@ public class Position
 		return this.x;
 	}
 
+	
 	/**
 	 * method for get the coordinate of y
 	 * @return y

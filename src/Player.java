@@ -8,41 +8,56 @@ import java.util.Scanner;
 public class Player
 {
 	
-	private Scanner scanner;
 	
-	private Board[][] board;
+	/**
+	 * Scanner permit a communication between the player and the application
+	 */
+	private Scanner scanner;	
 	
+	
+	/**
+	 * Creation of the object player
+	 */
 	private Object player;
 	
 	
+	/**
+	 * 
+	 */
 	String name; 
+	
+	
+	/**
+	 * @param name1
+	 */
 	public Player(String name1) 
 	{
-		name = name1; 
+		this.name = name1; 
 	}
+	
 	
 	/**
 	 * This method is dedicate to the player
 	 * 
-	 * @param player
+	 * @param player1
 	 * @param sc
 	 */
-
 	public Player(Player player1, Scanner sc)
 	{
 		this.player = player1;
-		this.board = new Board[7][7];
 		this.scanner = sc;
 	}
 	
+	
 	/**
 	 * Getter for the name
-	 * @return
+	 * @return name
 	 */
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
+	
 	
 	/**
 	 * Ask player for a tile to handle
